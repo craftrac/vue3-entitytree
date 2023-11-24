@@ -1,0 +1,239 @@
+/** switch styles **/
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css';
+:deep() .switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 18px;
+  margin: 0;
+  padding-inline: 15px;
+  margin-right: 5px;
+}
+
+:deep() .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+:deep() .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+:deep() .slider:before {
+  position: absolute;
+  content: "";
+  height: 12px;
+  width: 12px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+:deep() input:checked + .slider {
+  background-color: #66bb6a;
+}
+
+:deep() input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+:deep() input:checked + .slider:before {
+  -webkit-transform: translateX(12px);
+  -ms-transform: translateX(12px);
+  transform: translateX(12px);
+}
+:deep() a:hover > i,
+:deep() i:hover {
+  color: tomato !important;
+  cursor: pointer;
+}
+
+/* Rounded sliders */
+
+:deep() .slider.round {
+  border-radius: 34px;
+}
+
+:deep() .slider.round:before {
+  border-radius: 50%;
+}
+
+/* Switch styles end */
+
+/** border styles **/
+
+:deep() li {
+  list-style-type: none;
+  border: 2px solid #fff;
+  border-right: 0px !important;
+}
+
+:deep() li div {
+  display: flex;
+  list-style-type: none;
+  margin: 1px;
+  border-radius: 5px;
+  border: 2px solid #dcdcdc;
+  padding: 2px;
+  align-items: center;
+  min-height: 30px;
+}
+
+:deep() li a {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: black;
+  font-size: 14px;
+  font-family: monospace, "Open Sans";
+  text-decoration: none;
+}
+:deep() ul {
+  padding-left: 15px;
+
+}
+:deep()_order_div {
+  height: 20px !important;
+  border: 0 !important;
+}
+:deep()_order_div i {
+  margin: 5px !important;
+}
+
+/* Border styles end */
+
+/* menu icon */
+
+:deep() .menuIcon {
+  margin-left: auto;
+  color: black;
+}
+
+/* menu container */
+
+:deep()menuCont {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffff;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  color: #444;
+  position: fixed;
+  font-size: 12px;
+  font-family: monospace, "Open Sans";
+}
+
+:deep()menuCont span {
+  padding: 10px 10px 10px 10px;
+  border-bottom: 2px solid #9e9e9e;
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  white-space: pre;
+}
+
+:deep()menuCont span i {
+  color: #ef5350;
+  padding-right: 3px;
+}
+
+:deep()menuCont span:last-child {
+  border-bottom: 0px solid;
+}
+
+:deep()menuCont span:first-child:hover {
+  border-radius: 5px;
+}
+:deep()menuCont span:only-child {
+  border-radius: 5px;
+}
+:deep()menuCont span:hover {
+  background: #dcdcdc;
+}
+
+:deep() .menuIcon i {
+  pointer-events: none;
+}
+
+/** drag styles **/
+
+:deep() .drag-handler {
+  color: #ef5350;
+}
+
+:deep() .drag-handler i {
+  pointer-events: none;
+}
+
+:deep() .drag_triggered {
+  border: 2px solid red;
+}
+
+:deep() #div_ddetail {
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+:deep() #div_ddetail span {
+  font-size: larger;
+  margin: 3px 5px 3px 5px;
+}
+
+:deep() {
+  border: 2px solid darkgrey;
+  border-radius: 5px;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+:deep() .valid {
+  border: 2px solid green;
+  border-radius: 5px;
+}
+
+:deep() .invalid {
+  border: 2px solid #ef5350;
+  border-radius: 5px;
+}
+.disabled > * {
+  pointer-events: none;
+}
+:deep()menuCont i {
+  pointer-events: none;
+}
+
+:deep() ul.not-active {
+  max-height: 0;
+  transition: max-height 0.25s ease-out;
+  overflow: hidden;
+}
+
+:deep() ul.active {
+  /* max-height: 500px; */
+  transition: max-height 0.15s ease-in;
+}
+.dragging-element li{ border: 0px !important;}
+:deep()::-webkit-scrollbar { width: 2px !important;}
+:deep()::-webkit-scrollbar-track { background: whitesmoke !important;}
+:deep()::-webkit-scrollbar-thumb { background: grey !important; }
+
+/* fixes menu click event problem */
+.menuIcon > svg {
+  pointer-events: none;
+}
