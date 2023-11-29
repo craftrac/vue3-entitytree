@@ -236,7 +236,35 @@ class PickleTree {
      */
     build(c_config) {
         //set default config
-        this.config = c_config;
+        this.config = {
+            key: new Date().getTime(),
+            //logs are open or close
+            logMode: false,
+            //switch mode
+            switchMode: false,
+            hasLink: false,
+            //family mode
+            //for child
+            autoChild: true,
+            //for parent
+            autoParent: true,
+            //fold icon
+            foldedIcon: "fa fa-plus",
+            //unfold icon
+            unFoldedIcon: "fa fa-minus",
+            //menu icon
+            menuIcon: ["fa", "fa-list-ul"],
+            //link icon
+            linkIcon: "fa fa-list-ul",
+            //start status is collapsed or not
+            foldedStatus: false,
+            //drag
+            drag: false,
+            //order
+            order: false,
+            // context menu position
+            contextPos: 'after'
+        };
         //check config here!!
         for (let key in this.config) {
             if (c_config[key] !== undefined) {
@@ -249,9 +277,6 @@ class PickleTree {
         }
         //referance for some events
         this.main_container = document.getElementById(this.target);
-        // this.main_container.classList.add('ptree');
-        // this.main_container.innerHTML = '<div id="' + this.config.key + '_div_pickletree"><ul id="' + this.config.key + '_tree_picklemain"></ul></div>';
-        //console.log(this.main_container.getElementById(this.config.key+'_tree_picklemain'));
 
         this.area = document.getElementById(this.config.key + "_tree_picklemain");
         this.log("tree build started..");

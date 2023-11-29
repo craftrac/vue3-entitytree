@@ -1,0 +1,183 @@
+[
+    {
+      "n_id": 1,
+      "n_title": "MARINE AREAS",
+      "n_parentid": 0
+    },
+    {
+      "n_id": 11,
+      "n_title": "Assessment Areas",
+      "n_parentid": 1
+    },
+    {
+      "n_id": 111,
+      "n_title": "Mediterranean Sea Region",
+      "code": "ms_el_mediterranean_assessment_area",
+      "n_parentid": 11
+    },
+    {
+      "n_id": 112,
+      "n_title": "Adriatic Sea subregion",
+      "code": "mad_el_ms_ad_adriatic_assessment_area",
+      "n_parentid": 11
+    },
+    {
+      "n_id": 113,
+      "n_title": "Ionian Sea and Central Mediterranean Sea subregion",
+      "code": "mic_el_ms_io_ionian_assessment_area",
+      "n_parentid": 11
+    },
+    {
+      "n_id": 114,
+      "n_title": "Aegean-Levantine subregion",
+      "code": "mal_el_ms_al_aegean_levantine_assessment_area",
+      "n_parentid": 11
+    },
+    {
+      "n_id": 115,
+      "n_title": "Aegean-Levantine subregion – Aegean Sea",
+      "code": "mal_el_aa_ae_aegean_assessment_area",
+      "n_parentid": 11
+    },
+    {
+      "n_id": 116,
+      "n_title": "Aegean-Levantine subregion – North Aegean Sea",
+      "code": "mal_el_aa_na_north_aegean_assessment_area",
+      "n_parentid": 11
+    },
+    {
+      "n_id": 117,
+      "n_title": "Aegean-Levantine subregion – Central and South Aegean Sea",
+      "code": "mal_el_aa_csa_central_south_aegean_assessment_area",
+      "n_parentid": 11
+    },
+    {
+      "n_id": 118,
+      "n_title": "Aegean-Levantine subregion - Levantine Sea",
+      "code": "mal_el_aa_le_levantine_assessment_area",
+      "n_parentid": 11
+    },
+    {
+      "n_id": 12,
+      "n_title": "Coastal Waters",
+      "code": "v_el_mrus_nov2021_epsg3035_coastal_waters",
+      "n_parentid": 1
+    },
+    {
+      "n_id": 16,
+      "n_title": "Coastal Water Bodies (WFD)",
+      "code": "v_el_mrus_nov2021_epsg3035_coasts",
+      "n_parentid": 1
+    },
+    {
+      "n_id": 13,
+      "n_title": "Territorial Waters",
+      "code": "v_el_mrus_nov2021_epsg3035_territorial",
+      "n_parentid": 1
+    },
+    {
+      "n_id": 14,
+      "n_title": "Territorial Part beyond Coastal Waters",
+      "code": "v_el_mrus_nov2021_epsg3035_territorial_from_coastal",
+      "n_parentid": 1
+    },
+    {
+      "n_id": 15,
+      "n_title": "Beyond Territorial Waters",
+      "code": "v_el_mrus_nov2021_epsg3035_beyond_territorial",
+      "n_parentid": 1
+    },
+    {
+      "n_id": 2,
+      "n_title": "DATA SOURCES",
+      "n_parentid": 0
+    },
+    {
+      "n_id": 21,
+      "n_title": "MSFD MONITORING PROGRAMS",
+      "n_parentid": 2
+    },
+    {
+      "n_id": 213,
+      "n_title": "Beach Stations",
+      "code": "beach_stations",
+      "n_parentid": 21
+    },
+    {
+      "n_id": 211,
+      "n_title": "MSFD Stations",
+      "code": "cruise_stations",
+      "n_parentid": 21
+    },
+    {
+      "n_id": 212,
+      "n_title": "MSFD Cruises",
+      "n_parentid": 21
+    },
+    {
+      "n_id": 2121,
+      "n_title": "Cruise 2018",
+      "code": "cruise_2018",
+      "n_parentid": 212
+    },
+    {
+      "n_id": 2122,
+      "n_title": "Cruise 2019 A",
+      "code": "cruise_2019_a",
+      "n_parentid": 212
+    },
+    {
+      "n_id": 2123,
+      "n_title": "Cruise 2019 B",
+      "code": "cruise_2019_b",
+      "n_parentid": 212
+    },
+    {
+      "n_id": 2124,
+      "n_title": "Cruise 2020 A",
+      "code": "cruise_2020_a",
+      "n_parentid": 212
+    },
+    {
+      "n_id": 2125,
+      "n_title": "Cruise 2020 B",
+      "code": "cruise_2020_b",
+      "n_parentid": 212
+    },
+    {
+      "n_id": 2126,
+      "n_title": "Cruise 2021 A",
+      "code": "cruise_2021_a",
+      "n_parentid": 212
+    },
+    {
+      "n_id": 2127,
+      "n_title": "Cruise 2021 B",
+      "code": "cruise_2021_b",
+      "n_parentid": 212
+    },
+    {
+      "n_id": 2128,
+      "n_title": "Cruise 2019 A INALE",
+      "code": "cruise_2019_a_inale",
+      "n_parentid": 212
+    },
+    {
+      "n_id": 2129,
+      "n_title": "Cruise 2019 B INALE",
+      "code": "cruise_2019_b_inale",
+      "n_parentid": 212
+    },
+    {
+      "n_id": 21291,
+      "n_title": "Cruise 2021 A INALE",
+      "code": "cruise_2021_a_inale",
+      "n_parentid": 212
+    },
+    {
+      "n_id": 21292,
+      "n_title": "Cruise 2021 B INALE",
+      "code": "cruise_2021_b_inale",
+      "n_parentid": 212
+    }]
+  

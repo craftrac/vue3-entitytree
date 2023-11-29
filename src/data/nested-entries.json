@@ -1,0 +1,22 @@
+{
+    "name": "components",
+    "children": [
+      {
+        "name": "form",
+        "children": [
+          {
+            "name": "inputs",
+            "children": [
+              {
+                "name": "radio"
+              },
+              {
+                "name": "select",
+                "children": [{ "name": "lala" }]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+}
