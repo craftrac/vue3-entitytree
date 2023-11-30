@@ -1,11 +1,18 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 const props = defineProps<{
-    item: Item;
-    foldedStatus: {
-        type: boolean,
-        default: false
-    }
+    item: Item
 }>();
+
+const foldedStatus = ref(false);
+
+const toggleNode = () => {
+    console.debug("asasdfasd");
+        // let ie = document.getElementById("i_" + node.id);
+        // let ule = document.getElementById("c_" + node.id);
+        foldedStatus.value = !foldedStatus.value;
+        console.debug(foldedStatus.value);
+    }
 </script>
 
 <script lang="ts">
@@ -17,21 +24,21 @@ export type Item = {
 const slotName = 'default';
 </script>
 <template>
-  <div>
-    <div>
-      <slot :item="props.item" />
-    </div>
-    <div
-      v-for="(child, index) in props.item.children"
-      :key="index"
+  <ul class="node-list">
+    <li class="node-container">
+      <slot :item="props.item" :fold="toggleNode" />
+    </li>
+    <template 
+      v-for="child in props.item.children"
     >
-      <TreeNode :item="child" class="node">
+      <TreeNode :item="child" class="node" >
         <template #[slotName]="{ item }: { item: Item }">
+            {{ item }}
           <slot :item="item" />
         </template>
       </TreeNode>
-    </div>
-  </div>
+    </template>
+  </ul>
 </template>
 <style scoped>
 :deep() .node {

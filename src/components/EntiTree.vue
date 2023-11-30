@@ -1,15 +1,15 @@
 <template>
     <div id="layertree" class="ptree">
         <TreeNode :id="config.key" :item="myNestedData">
-          <template v-slot="{ item }">
+          <template v-slot="{ item, fold }">
             <div class="drop_target" style="color: #2d2d2d">
               <DragHandler class="drag-handler" />
-              <NestToggle class="toggle-handler" v-if="item.children" @click="toggleNode(item)"/>
+              <NestToggle class="toggle-handler" v-if="item.children" @click="fold()" />
               {{ item.name }}
             </div>
           </template>
         </TreeNode>
-        <ul :id="config.key + '_tree_picklemain'">
+        <ul :id="config.key + '_tree_picklemain'" v-show="false">
           <li></li>
         </ul>
     </div>
@@ -80,48 +80,48 @@ const props = defineProps({
 
 
 onMounted(() => {
-    pTree = new PickleTree({
-        c_target: 'layertree', //'maptab_treeview',
-        c_config: props.config,
-        //   switchCallback: layerTreeSwitch,
-          c_data: myData
-    });
+    // pTree = new PickleTree({
+    //     c_target: 'layertree', //'maptab_treeview',
+    //     c_config: props.config,
+    //     //   switchCallback: layerTreeSwitch,
+    //       c_data: myData
+    // });
 })
 
 
-const toggleNode = (node) => {
-  console.debug(node);
-        if (node.children.length > 0) {
-            // let ie = document.getElementById("i_" + node.id);
-            // let ule = document.getElementById("c_" + node.id);
-            if (node.foldedStatus === false) {
-              console.debug("ASDASDAS");
-                //change icon
-                ie.classList.remove("fa-minus");
-                ie.classList.add("fa-plus");
-                //hide element
-                //ule.style.display = "none";
-                ule.classList.remove("active");
-                ule.classList.add("not-active");
-            } else {
-                //change icon
-                ie.classList.remove("fa-plus");
-                ie.classList.add("fa-minus");
-                //show element
-                //ule.style.display = "";
-                ule.classList.remove("not-active");
-                ule.classList.add("active");
-            }
-            node.foldedStatus = !node.foldedStatus;
-            //change node status
-            for (let key in this.nodeList) {
-                if (this.nodeList[key].id === node.id) {
-                    this.nodeList[key].foldedStatus = node.foldedStatus;
-                }
-            }
-            this.log("node toggled..");
-        } else {
-            this.log("node not has childs...!");
-        }
-    }
+// const toggleNode = (node) => {
+//   console.debug(node);
+//         if (node.children.length > 0) {
+//             // let ie = document.getElementById("i_" + node.id);
+//             // let ule = document.getElementById("c_" + node.id);
+//             if (node.foldedStatus === false) {
+//               console.debug("ASDASDAS");
+//                 //change icon
+//                 ie.classList.remove("fa-minus");
+//                 ie.classList.add("fa-plus");
+//                 //hide element
+//                 //ule.style.display = "none";
+//                 ule.classList.remove("active");
+//                 ule.classList.add("not-active");
+//             } else {
+//                 //change icon
+//                 ie.classList.remove("fa-plus");
+//                 ie.classList.add("fa-minus");
+//                 //show element
+//                 //ule.style.display = "";
+//                 ule.classList.remove("not-active");
+//                 ule.classList.add("active");
+//             }
+//             node.foldedStatus = !node.foldedStatus;
+//             //change node status
+//             for (let key in this.nodeList) {
+//                 if (this.nodeList[key].id === node.id) {
+//                     this.nodeList[key].foldedStatus = node.foldedStatus;
+//                 }
+//             }
+//             this.log("node toggled..");
+//         } else {
+//             this.log("node not has childs...!");
+//         }
+//     }
 </script>

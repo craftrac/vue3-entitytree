@@ -11,8 +11,33 @@
                 "name": "radio"
               },
               {
-                "name": "select",
+                "name": "select1",
                 "children": [{ "name": "lala" }]
+              },
+              {
+                "name": "select2",
+                "children": [{ "name": "option1" }, { "name": "option2" }, { "name": "option3"}]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "form",
+        "children": [
+          {
+            "name": "inputs",
+            "children": [
+              {
+                "name": "radio"
+              },
+              {
+                "name": "select1",
+                "children": [{ "name": "lala" }]
+              },
+              {
+                "name": "select2",
+                "children": [{ "name": "option1" }, { "name": "option2" }, { "name": "option3"}]
               }
             ]
           }
