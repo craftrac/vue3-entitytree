@@ -27,13 +27,10 @@
 </style>
 
 <script setup>
-// import PickleTree from '../ptree.js';
-import { onMounted, ref } from 'vue';
 import myNestedData from '../data/nested-entries.json';
 import TreeNode from './TreeNode.vue';
 import DragHandler from './DragHandler.vue';
 import NestToggle from './NestToggle.vue';
-const folded = ref(false);
 
 const props = defineProps({
     c_data: {
@@ -74,16 +71,4 @@ const props = defineProps({
     }
 });
 
-const toggleChildNodes = (newFolded) => {
-    folded.value = newFolded;
-  };
-
-onMounted(() => {
-    // pTree = new PickleTree({
-    //     c_target: 'layertree', //'maptab_treeview',
-    //     c_config: props.config,
-    //     //   switchCallback: layerTreeSwitch,
-    //       c_data: myData
-    // });
-})
 </script>
