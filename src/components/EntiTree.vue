@@ -1,17 +1,14 @@
 <template>
     <div id="layertree" class="ptree">
-        <TreeNode :id="config.key" :item="myNestedData">
-          <template v-slot="{ item, fold }">
+        <TreeNode :id="config.key" :item="myNestedData" >
+          <template v-slot="{ item, toggle }">
             <div class="drop_target" style="color: #2d2d2d">
               <DragHandler class="drag-handler" />
-              <NestToggle class="toggle-handler" v-if="item.children" @click="fold()" />
+              <NestToggle class="toggle-handler" v-if="item.children" @toggle="toggle"/>
               {{ item.name }}
             </div>
           </template>
         </TreeNode>
-        <ul :id="config.key + '_tree_picklemain'" v-show="false">
-          <li></li>
-        </ul>
     </div>
 </template>
 
@@ -30,14 +27,14 @@
 </style>
 
 <script setup>
-import PickleTree from '../ptree.js';
-import { onMounted } from 'vue';
-import myData from '../data/entries.json';
+// import PickleTree from '../ptree.js';
+import { onMounted, ref } from 'vue';
+// import myData from '../data/entries.json';
 import myNestedData from '../data/nested-entries.json';
 import TreeNode from './TreeNode.vue';
 import DragHandler from './DragHandler.vue';
 import NestToggle from './NestToggle.vue';
-
+const folded = ref(false);
 
 const props = defineProps({
     c_data: {
@@ -78,6 +75,9 @@ const props = defineProps({
     }
 });
 
+const toggleChildNodes = (newFolded) => {
+    folded.value = newFolded;
+  };
 
 onMounted(() => {
     // pTree = new PickleTree({

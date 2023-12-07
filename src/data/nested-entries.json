@@ -1,47 +1,48 @@
 {
-    "name": "components",
+    "name": "main",
     "children": [
       {
-        "name": "form",
+        "name": "sub1",
         "children": [
           {
-            "name": "inputs",
+            "name": "sub11",
             "children": [
               {
-                "name": "radio"
+                "name": "sub111"
               },
               {
-                "name": "select1",
-                "children": [{ "name": "lala" }]
+                "name": "sub112",
+                "children": [{ "name": "sub1121" }]
               },
               {
-                "name": "select2",
-                "children": [{ "name": "option1" }, { "name": "option2" }, { "name": "option3"}]
+                "name": "sub113",
+                "children": [{ "name": "sub1131" }, { "name": "sub1132" }, { "name": "sub1133"}]
               }
             ]
           }
         ]
       },
       {
-        "name": "form",
+        "name": "sub2",
         "children": [
           {
-            "name": "inputs",
+            "name": "sub21",
             "children": [
               {
-                "name": "radio"
+                "name": "sub211"
               },
               {
-                "name": "select1",
-                "children": [{ "name": "lala" }]
+                "name": "sub212"
               },
               {
-                "name": "select2",
-                "children": [{ "name": "option1" }, { "name": "option2" }, { "name": "option3"}]
+                "name": "sub213"
               }
             ]
           }
         ]
+      },
+      {
+        "name": "sub3"
       }
     ]
 }
