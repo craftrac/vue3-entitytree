@@ -29,7 +29,6 @@
 <script setup>
 // import PickleTree from '../ptree.js';
 import { onMounted, ref } from 'vue';
-// import myData from '../data/entries.json';
 import myNestedData from '../data/nested-entries.json';
 import TreeNode from './TreeNode.vue';
 import DragHandler from './DragHandler.vue';
@@ -87,41 +86,4 @@ onMounted(() => {
     //       c_data: myData
     // });
 })
-
-
-// const toggleNode = (node) => {
-//   console.debug(node);
-//         if (node.children.length > 0) {
-//             // let ie = document.getElementById("i_" + node.id);
-//             // let ule = document.getElementById("c_" + node.id);
-//             if (node.foldedStatus === false) {
-//               console.debug("ASDASDAS");
-//                 //change icon
-//                 ie.classList.remove("fa-minus");
-//                 ie.classList.add("fa-plus");
-//                 //hide element
-//                 //ule.style.display = "none";
-//                 ule.classList.remove("active");
-//                 ule.classList.add("not-active");
-//             } else {
-//                 //change icon
-//                 ie.classList.remove("fa-plus");
-//                 ie.classList.add("fa-minus");
-//                 //show element
-//                 //ule.style.display = "";
-//                 ule.classList.remove("not-active");
-//                 ule.classList.add("active");
-//             }
-//             node.foldedStatus = !node.foldedStatus;
-//             //change node status
-//             for (let key in this.nodeList) {
-//                 if (this.nodeList[key].id === node.id) {
-//                     this.nodeList[key].foldedStatus = node.foldedStatus;
-//                 }
-//             }
-//             this.log("node toggled..");
-//         } else {
-//             this.log("node not has childs...!");
-//         }
-//     }
 </script>

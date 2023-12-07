@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue';
+import { ref } from 'vue';
 const props = withDefaults(
   defineProps<{
     item: Item;
@@ -7,16 +7,10 @@ const props = withDefaults(
 }>(), {
   expanded: false
 });
-// const props = 
-//   defineProps<{
-//     item: Item;
-// }>();
 
 const isExpanded = ref(false);
 
-
 const toggle = (status) => {
-  console.debug(status);
   isExpanded.value = status; // Toggle the 'folded' state
 };
 </script>
@@ -38,9 +32,9 @@ const slotName = 'default';
     <template 
       v-for="child in item.children"
     >
-      <TreeNode :item="child" class="node" v-show="isExpanded" :expanded="isExpanded" >
+      <TreeNode :item="child" class="node" v-show="isExpanded" >
         <template v-slot="{ item, toggle }: { item: Item; toggle: Function }">
-          <slot :item="item" :expanded="isExpanded" />
+          <slot :item="item" :toggle="toggle" />
         </template>
       </TreeNode>
     </template>
