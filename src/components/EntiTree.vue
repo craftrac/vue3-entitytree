@@ -1,11 +1,12 @@
 <template>
     <div id="layertree" class="ptree">
-        <TreeNode :id="config.key" :item="myNestedData" >
+        <TreeNode :id="config.key" :item="data" >
           <template v-slot="{ item, toggle }">
             <div class="drop_target" style="color: #2d2d2d">
-              <DragHandler class="drag-handler" />
+              <DragHandler class="drag-handler"/>
               <NestToggle class="toggle-handler" v-if="item.children" @toggle="toggle"/>
               {{ item.name }}
+              <ContextMenu v-if="item.menu" :menuItems="item.menu"/>
             </div>
           </template>
         </TreeNode>
@@ -29,9 +30,13 @@
 <script setup>
 import myNestedData from '../data/nested-entries.json';
 import TreeNode from './TreeNode.vue';
+import ContextMenu from './ContextMenu.vue';
 import DragHandler from './DragHandler.vue';
 import NestToggle from './NestToggle.vue';
+import { reactive } from 'vue';
 
+
+const data = reactive(myNestedData);
 const props = defineProps({
     c_data: {
         type: Object,
@@ -71,4 +76,9 @@ const props = defineProps({
     }
 });
 
+
+const test = () => {
+    data = [];
+    console.log('test');
+}
 </script>

@@ -1,5 +1,6 @@
 {
     "name": "main",
+    "menu": ["one", "two", "three"],
     "children": [
       {
         "name": "sub1",
