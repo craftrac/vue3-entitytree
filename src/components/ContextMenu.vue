@@ -1,11 +1,10 @@
 <template>
     <a @click="showMenu = !showMenu">
         <i class="fa fa-list-ul"></i>
-        <ul v-show="showMenu" class="contextMenu" >
-            <li data-node="123" v-for="entry in menuItems">
-                <a><i class="icon-class"></i> {{ entry }}</a>
+        <ul v-show="showMenu" class="contextMenu">
+            <li v-for="entry in menuItems">
+                <a>{{ entry }}</a>
             </li>
-            <!-- More menu items... -->
         </ul>
     </a>
 </template>
@@ -17,7 +16,19 @@
 </script>
 <style scoped>
     .contextMenu {
+        padding-left: 0px;
         position: absolute;
-        background-color: aliceblue;
+        text-align: left;
+        background-color: white;
+    }
+
+    .contextMenu li {
+        list-style-type: none;
+    }
+
+    .contextMenu li:hover {
+        background-color: #ef5350;
+        color: white;
+        cursor: pointer;
     }
 </style>

@@ -1,15 +1,17 @@
 <template>
     <div id="layertree" class="ptree">
+      <draggable :list="data" :group="config.key" @end="onDragEnd">
         <TreeNode :id="config.key" :item="data" >
-          <template v-slot="{ item, toggle }">
+          <template v-slot="{ item, toggle, move }">
             <div class="drop_target" style="color: #2d2d2d">
-              <DragHandler class="drag-handler"/>
+              <DragHandler class="drag-handler" @drag="move"/>
               <NestToggle class="toggle-handler" v-if="item.children" @toggle="toggle"/>
               {{ item.name }}
               <ContextMenu v-if="item.menu" :menuItems="item.menu"/>
             </div>
           </template>
         </TreeNode>
+        </draggable>
     </div>
 </template>
 
